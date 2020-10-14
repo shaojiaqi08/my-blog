@@ -1,68 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## react hooks + koa + mysql
 
-## Available Scripts
+> 一个及其简洁的个人博客系统、即插即用，如果你想使用这个博客、动动手改改配置即可使用！！
 
-In the project directory, you can run:
+- 前后台分离式开发
+- 博客样式几乎借助于 `antd` 这个优秀的 UI 框架，主打简约风格，是笔者借鉴了 `antd` 官方的风格所设计。
+- 具备了代码高亮、权限管理、登录、评论的个人博客...
+- 具备文件导入功能，那么你可以直接通过导入 `md` 文件导入文章内容。
 
-### `yarn start`
+* 我的博客地址: http://47.114.46.245/
+  
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 实现功能
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- [x] 前台：主页 + 列表页 + 搜索页 + 分类页 + 标签页
+- [x] 后台：文章管理 + 用户管理 + 分类管理
+- [x] `markdown` 代码高亮
+- [x] 用户评论与回复
+- [x] `md` 文件导入功能！可以直接上传 `md` 文件生成文章内容到md编辑器中
 
-### `yarn test`
+### 技术栈
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 前端 （基于 `create-react-app eject` 后的配置）
 
-### `yarn build`
+  - react v16.9.0 `hooks` + `redux` + `react-router5`
+  - `marked highlight.js`
+  - `webpack` 打包优化
+  - `fetch` 封装
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 后端 （自构建后台项目）
+  - `eggjs`
+  - `mysql`
+  - `jwt` 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## 项目结构
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 目录结构
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```js
+.
+│
+├─config                // 构建配置
+├─public                // html 入口
+├─scripts               // 项目脚本
+└─src                   // 前端项目源码
+   ├─assets             // 静态文件
+   ├─components         // 公用组件
+   ├─layout             // 布局组件
+   ├─redux              // redux 目录
+   ├─routes             // 路由
+   ├─styles             // 样式
+   ├─utils              // 工具包
+   ├─views              // 视图层
+   ├─  App.jsx          // 后端主入口文件
+   ├─  config.js        // 项目配置 github 个人主页、个人介绍等等
+   ├─  index.js         // 主入口文件
+   └─...
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
