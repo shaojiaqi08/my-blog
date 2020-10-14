@@ -1,0 +1,9 @@
+.screen_content {
+  :global {
+    .ant-picker-input {
+      > input:placeholder-shown {
+        text-align: center;
+      }
+    }
+  }
+}

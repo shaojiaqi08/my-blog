@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d2814072-b284-44e3-88f0-460e4192ee09" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/config/env.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/getHttpsConfig.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/jest/cssTransform.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/jest/fileTransform.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/modules.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/paths.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/pnpTs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/webpackDevServer.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/build.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/start.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/comment/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/comment/scss/index.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/screen/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/screen/scss/index.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/searchPost/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/searchPost/scss/index.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userList/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userList/scss/index.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layout/admin/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layout/admin/scss/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layout/index/connect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/loadingReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/navLinkReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/userReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/CodeBlock.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/mapUserStateDispatch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/addPost/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/addPost/scss/index.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/cateManager/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/cateManager/scss/index.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/postDetail/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/postDetail/scss/index.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/postManager/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/postManager/scss/index.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/userManager/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/userManager/scss/index.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/sass/app.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="eggjs Controller" />
+        <option value="eggjs Service" />
+        <option value="react ClassComponent" />
+        <option value="react FunctionComp" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1bpdrsZblvPUgCfW75N4IV2DT7Z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="添加" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="D:/project/demo/release" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="ts.external.directory.path" value="D:\WebStorm 2020.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/components/comment/index.jsx" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MagicBook Pro\Desktop\rn-blog\my-blog\src\layout" />
+      <recent name="C:\Users\MagicBook Pro\Desktop\rn-blog\my-blog\src" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d2814072-b284-44e3-88f0-460e4192ee09" name="默认更改列表" comment="" />
+      <created>1589333170109</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589333170109</updated>
+      <workItem from="1589333172420" duration="21000" />
+      <workItem from="1589333214586" duration="4385000" />
+      <workItem from="1589337627798" duration="15755000" />
+      <workItem from="1589437054487" duration="5000" />
+      <workItem from="1590129715073" duration="8037000" />
+      <workItem from="1590225157213" duration="8844000" />
+      <workItem from="1590309527961" duration="44000" />
+      <workItem from="1590309602616" duration="4712000" />
+      <workItem from="1590457451380" duration="15795000" />
+      <workItem from="1590559926261" duration="10808000" />
+      <workItem from="1590627913069" duration="19285000" />
+      <workItem from="1590733314345" duration="10370000" />
+      <workItem from="1590819783860" duration="13198000" />
+      <workItem from="1591085477141" duration="3000" />
+      <workItem from="1591318082730" duration="14165000" />
+      <workItem from="1591349183215" duration="361000" />
+      <workItem from="1591407954977" duration="15340000" />
+      <workItem from="1591582498328" duration="1706000" />
+      <workItem from="1591630946359" duration="3145000" />
+      <workItem from="1591685585623" duration="2000" />
+      <workItem from="1592018088254" duration="20157000" />
+      <workItem from="1592229243390" duration="6710000" />
+      <workItem from="1592373668120" duration="3000" />
+      <workItem from="1592381778711" duration="4656000" />
+      <workItem from="1592440949264" duration="4000" />
+      <workItem from="1592468883309" duration="3940000" />
+      <workItem from="1592527248999" duration="3000" />
+      <workItem from="1592530253256" duration="3024000" />
+      <workItem from="1592533493004" duration="13872000" />
+      <workItem from="1592558396788" duration="568000" />
+      <workItem from="1592878990362" duration="2403000" />
+      <workItem from="1592882458383" duration="10570000" />
+      <workItem from="1592960752342" duration="11560000" />
+      <workItem from="1593056017768" duration="6644000" />
+      <workItem from="1593332543679" duration="5000" />
+      <workItem from="1593349461295" duration="6369000" />
+      <workItem from="1593391492594" duration="3000" />
+      <workItem from="1593931874934" duration="6892000" />
+      <workItem from="1594024987280" duration="2000" />
+      <workItem from="1594090854516" duration="2000" />
+      <workItem from="1594262083824" duration="205000" />
+      <workItem from="1594348447907" duration="4109000" />
+      <workItem from="1594354616640" duration="2000" />
+      <workItem from="1599094897352" duration="7033000" />
+      <workItem from="1599639350008" duration="4933000" />
+      <workItem from="1599700617558" duration="18414000" />
+      <workItem from="1599785145807" duration="20816000" />
+      <workItem from="1599907082513" duration="6387000" />
+      <workItem from="1600072024420" duration="3972000" />
+      <workItem from="1600133597924" duration="2000" />
+      <workItem from="1600744172131" duration="14731000" />
+      <workItem from="1600823561101" duration="3000" />
+      <workItem from="1600824484675" duration="19627000" />
+      <workItem from="1600918445584" duration="9784000" />
+      <workItem from="1600994729128" duration="1711000" />
+      <workItem from="1600996453218" duration="9462000" />
+      <workItem from="1601195079199" duration="1000" />
+      <workItem from="1601195952986" duration="3353000" />
+      <workItem from="1601256600411" duration="1000" />
+      <workItem from="1601258423036" duration="4594000" />
+      <workItem from="1601273620804" duration="8987000" />
+      <workItem from="1601340079754" duration="322000" />
+      <workItem from="1601366125700" duration="4466000" />
+      <workItem from="1601427889611" duration="5000" />
+      <workItem from="1601439457917" duration="467000" />
+      <workItem from="1601719731617" duration="2835000" />
+      <workItem from="1601894696468" duration="79000" />
+      <workItem from="1601895573392" duration="10245000" />
+      <workItem from="1601980853200" duration="7691000" />
+      <workItem from="1602297054285" duration="8723000" />
+      <workItem from="1602463061069" duration="14815000" />
+      <workItem from="1602549391317" duration="17716000" />
+      <workItem from="1602638860952" duration="5937000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1296" y="208" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602556395143">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1296" y="208" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602556395143" />
+    <state x="-1242" y="217" key="FileChooserDialogImpl" timestamp="1601980857683">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1242" y="217" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601980857683" />
+    <state x="-1539" y="78" key="SettingsEditor" timestamp="1601980711452">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1539" y="78" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601980711452" />
+    <state x="-1414" y="111" width="757" height="690" key="find.popup" timestamp="1602644777307">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1414" y="111" width="757" height="690" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602644777307" />
+    <state x="506" y="111" width="757" height="690" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601895670092" />
+    <state x="-1381" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1602002101280">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1381" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602002101280" />
+  </component>
+</project>

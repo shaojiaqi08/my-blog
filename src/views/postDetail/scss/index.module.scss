@@ -1,0 +1,193 @@
+.detail{
+  height: 85vh;
+  box-sizing: border-box;
+  padding: 30px;
+
+  .detail_title{
+    font-size: 26px;
+    color: #333333;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .detail_content{
+
+    box-sizing: border-box;
+
+    :global{
+      .hljs-keyword, .hljs-selector-tag, .hljs-name, .hljs-attr {
+        color: red;
+      }
+
+      .hljs, .hljs-tag, .hljs-subst{
+        color: red;
+      }
+
+      .hljs-comment{
+        color: #aaa;
+      }
+
+      .hljs-code, .hljs-title, .hljs-section, .hljs-selector-class{
+        color: #1890ff;
+      }
+
+      .hljs-string, .hljs-type, .hljs-built_in, .hljs-builtin-name, .hljs-selector-id, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-addition, .hljs-variable, .hljs-template-variable{
+        color: #1890ff;
+      }
+
+      h1{
+        font-size: 24px;
+      }
+
+      h2{
+        font-size: 22px;
+      }
+
+      h3{
+        font-size: 20px;
+      }
+
+      h4{
+        font-size: 18px;
+      }
+
+      h5{
+        font-size: 16px;
+      }
+
+      h6{
+        font-size: 14px;
+      }
+    }
+
+    /*对 markdown 样式的补充*/
+    code,
+    pre {
+      color: #aaa;
+      background: none;
+      font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+      font-size: 1em;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      word-wrap: normal;
+      line-height: 1.5;
+      tab-size: 4;
+      hyphens: none;
+      overflow-y: hidden;
+    }
+
+    pre {
+      background: #f8f8f8;
+      position: relative;
+      padding:10px 0 10px 3.8em;
+      border-radius: 5px;
+    }
+
+    code {
+      position: relative;
+      white-space: inherit;
+      color: #555 !important;
+    }
+
+
+
+    span[line-row] {
+      position: absolute;
+      pointer-events: none;
+      top: 0;
+      font-size: 100%;
+      left: -3.8em;
+      width: 3em;
+      letter-spacing: -1px;
+      border-right: 1px solid #999;
+      user-select: none;
+      counter-reset: linenumber;
+    }
+
+    span[line-row] > span {
+      pointer-events: none;
+      display: block;
+      counter-increment: linenumber;
+    }
+
+    span[line-row] > span::before {
+      content: counter(linenumber);
+      color: #999;
+      display: block;
+      padding-right: .8em;
+      text-align: right
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 1em;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    p > code:not([class]) {
+      padding: 2px 4px;
+      font-size: 90%;
+      color: #c7254e;
+      background-color: #f9f2f4;
+      border-radius: 4px;
+    }
+
+    p img {
+      /* 图片居中 */
+      margin: 0 auto;
+      display: flex;
+    }
+
+    #content {
+      font-family: "Microsoft YaHei", 'sans-serif';
+      font-size: 16px;
+      line-height: 30px;
+    }
+
+    #content .desc ul,
+    #content .desc ol {
+      color: #333333;
+      margin: 1.5em 0 0 25px;
+    }
+
+    #content .desc h1,
+    #content .desc h2 {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+      font-size: 5em;
+    }
+
+    #content .desc a {
+      color: #009a61;
+    }
+  }
+
+  .detail_desc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #eeeeee;
+    padding: 10px 0 30px;
+    margin-bottom: 10px;
+
+    .tags,
+    .ctime{
+      margin-right: 20px;
+      font-size: 14px;
+      color: #999;
+
+      span{
+        margin-left: 5px;
+      }
+    }
+  }
+}

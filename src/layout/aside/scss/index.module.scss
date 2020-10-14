@@ -1,0 +1,55 @@
+.aside {
+  border-right: 1px solid #eee;
+  height: calc(100vh - 75px);
+  overflow: auto;
+
+  .my_info {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+
+    img {
+      width: 100px;
+      border-radius: 50px;
+      border: 1px solid #eee;
+    }
+
+    .nickname {
+      font-size: 18px;
+      font-weight: 600;
+      padding: 10px 0 5px;
+    }
+
+    .desc {}
+  }
+
+  .hot_post {
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        cursor: pointer;
+        padding-bottom: 5px;
+        padding-left: 25px;
+        transition: all .3s;
+        padding-top: 5px;
+
+        &:hover {
+          background: #f0f2f5;
+          color: #40a9ff;
+        }
+      }
+    }
+
+  }
+
+  .tag {
+    .tag_item {
+      padding: 0 25px;
+    }
+  }
+}

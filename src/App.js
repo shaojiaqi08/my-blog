@@ -1,8 +1,12 @@
 import React from "react";
-import css from "./assets/css/sass/app.sass";
 
-function App() {
-  return <div className={css.App}>我的博客</div>;
+function App(props) {
+    return (
+        <div className="App">
+            {props.children}
+            {/* <IndexComp {...props} /> */}
+        </div>
+    );
 }
 
 export default App;

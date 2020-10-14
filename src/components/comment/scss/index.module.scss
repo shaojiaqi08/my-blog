@@ -1,0 +1,20 @@
+
+.commentList{
+  //margin-top: 50px;
+  :global{
+    .ant-form-item{
+      margin-bottom: 5px;
+    }
+
+    .ant-comment-inner{
+      padding: 10px 0 10px;
+    }
+  }
+
+}
+
+.editor{
+
+}
+
+

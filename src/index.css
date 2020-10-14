@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+  overflow: hidden;
+}
+
+.ant-modal {
+  width: 460px !important;
+}

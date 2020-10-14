@@ -1,0 +1,32 @@
+.category_page{
+  padding: 50px 0;
+
+  .cate_title{
+    font-size: 24px;
+  }
+
+  .cate_desc{
+    font-weight: 400;
+    padding: 30px 0;
+  }
+
+  .cate_tag{
+    :global{
+      .ant-tag{
+        // padding: 0 10px;
+        margin-right: 30px;
+      }
+      .ant-badge-count{
+        right: 30px;
+      }
+
+      .ant-badge-count{
+        min-width: 15px;
+        height: 15px;
+        padding: 0;
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,203 @@
+.home_page {
+  height: calc(100vh - 75px);
+  overflow: auto;
+}
+
+.post_list {
+  padding: 30px;
+  list-style: none;
+
+  .post_item {
+    border: 1px solid #eee;
+    padding: 30px;
+    cursor: pointer;
+    transition: all .4s;
+    margin-bottom: 30px;
+
+    &:hover {
+      background: #f0fbff;
+      box-shadow: 3px 3px 10px 0 #eee;
+    }
+
+    div {
+      .post_title {
+        .title_text {
+          font-size: 20px;
+          font-weight: 800;
+        }
+
+        .title_time {
+          font-size: 12px;
+          font-weight: 100;
+        }
+      }
+
+      .desc {
+        max-height: 30vh;
+        overflow: hidden;
+        :global{
+          .hljs-keyword, .hljs-selector-tag, .hljs-name, .hljs-attr {
+            color: red;
+          }
+
+          .hljs, .hljs-tag, .hljs-subst{
+            color: red;
+          }
+
+          .hljs-comment{
+            color: #aaa;
+          }
+
+          .hljs-code, .hljs-title, .hljs-section, .hljs-selector-class{
+            color: #1890ff;
+          }
+
+          .hljs-string, .hljs-type, .hljs-built_in, .hljs-builtin-name, .hljs-selector-id, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-addition, .hljs-variable, .hljs-template-variable{
+            color: #1890ff;
+          }
+        }
+
+        /*对 markdown 样式的补充*/
+        code,
+        pre {
+          color: #aaa;
+          background: none;
+          font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+          font-size: 1em;
+          text-align: left;
+          white-space: pre;
+          word-spacing: normal;
+          word-break: normal;
+          word-wrap: normal;
+          line-height: 1.5;
+          tab-size: 4;
+          hyphens: none;
+          overflow-y: hidden;
+        }
+
+        pre {
+          background: #f8f8f8;
+          position: relative;
+          padding:10px 0 10px 3.8em;
+          border-radius: 5px;
+        }
+
+        code {
+          position: relative;
+          white-space: inherit;
+          color: #555 !important;
+        }
+
+
+
+        span[line-row] {
+          position: absolute;
+          pointer-events: none;
+          top: 0;
+          font-size: 100%;
+          left: -3.8em;
+          width: 3em;
+          letter-spacing: -1px;
+          border-right: 1px solid #999;
+          user-select: none;
+          counter-reset: linenumber;
+        }
+
+        span[line-row] > span {
+          pointer-events: none;
+          display: block;
+          counter-increment: linenumber;
+        }
+
+        span[line-row] > span::before {
+          content: counter(linenumber);
+          color: #999;
+          display: block;
+          padding-right: .8em;
+          text-align: right
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin-top: 1em;
+        }
+
+        strong {
+          font-weight: bold;
+        }
+
+        p > code:not([class]) {
+          padding: 2px 4px;
+          font-size: 90%;
+          color: #c7254e;
+          background-color: #f9f2f4;
+          border-radius: 4px;
+        }
+
+        p img {
+          /* 图片居中 */
+          margin: 0 auto;
+          display: flex;
+        }
+
+        #content {
+          font-family: "Microsoft YaHei", 'sans-serif';
+          font-size: 16px;
+          line-height: 30px;
+        }
+
+        #content .desc ul,
+        #content .desc ol {
+          color: #333333;
+          margin: 1.5em 0 0 25px;
+        }
+
+        #content .desc h1,
+        #content .desc h2 {
+          border-bottom: 1px solid #eee;
+          padding-bottom: 10px;
+          font-size: 5em;
+        }
+
+        #content .desc a {
+          color: #009a61;
+        }
+      }
+
+      .viewers {
+        padding-top: 20px;
+        // display: flex;
+        // align-items: center;
+
+        i {
+          padding-right: 3px;
+          color: #ccc;
+          font-size: 12px;
+
+          &:last-child {
+            font-size: 14px;
+          }
+        }
+
+        span {
+          padding-right: 5px;
+          font-size: 13px;
+          color: #ccc;
+        }
+      }
+    }
+  }
+}
+
+//.scss_post_list__1_nI8 .scss_post_item__222Nw div .scss_desc__30oHt code, .scss_post_list__1_nI8 .scss_post_item__222Nw div .scss_desc__30oHt pre{
+//  color: #a626a4!important;
+//}
+//
+//.hljs-string, .hljs-type, .hljs-built_in, .hljs-builtin-name, .hljs-selector-id, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-addition, .hljs-variable, .hljs-template-variable {
+//  color: #1890ff!important;
+//}
+

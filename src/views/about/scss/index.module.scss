@@ -1,0 +1,80 @@
+.about_page {
+  padding: 30px;
+  height: calc(100vh - 70px);
+  width:  calc(100vw - 300px);
+  overflow-y: auto;
+  overflow-x: hidden;
+
+
+  .about_title {
+    width: 100vw;
+
+    img {
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      border-radius: 35px;
+      border: 2px solid #eee;
+    }
+
+    span {
+      margin-left: 10px;
+    }
+  }
+
+  .about_desc {
+    width: 100vw;
+    p {
+
+    }
+  }
+
+  .about_us {
+    width: 100vw;
+    ul {
+      li {
+        list-style: circle;
+        padding: 5px;
+      }
+    }
+  }
+
+  .message{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //border-bottom: 1px solid #dddddd;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .msg_btn{
+    text-align: right;
+    margin-top: 10px;
+
+    .tipSpan{
+      margin-right: 20px;
+      color: #1890ff;
+    }
+  }
+
+  .commentBox{
+    margin-top: 10px;
+  }
+
+  //.textarea{
+  //  width: 100%;
+  //  height: 100px;
+  //  margin-top: 20px;
+  //  border: 1px solid #cccccc;
+  //  border-radius: 5px;
+  //  resize: none;
+  //  transition: all 4s;
+  //  outline: none;
+  //
+  //  &:hover{
+  //    border: 2px solid #619eee;
+  //  }
+  //}
+
+}

@@ -1,0 +1,128 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+
+  :global {
+    .ant-modal {
+      width: 460px !important;
+    }
+  }
+
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo_title {
+      font-size: 18px;
+      padding-right: 80px;
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 40%;
+        border-right: 1px solid #ddd;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .font_logo {
+      color: #055796;
+      margin-right: 15px;
+    }
+
+    .search {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 0 80px;
+
+      :global {
+        .anticon {
+          color: #ccc;
+        }
+
+        .ant-input-affix-wrapper {
+          border: none;
+
+          > .ant-input {
+            font-size: 12px;
+          }
+        }
+
+        .ant-input-affix-wrapper-lg {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+
+
+  .nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    .nav_menu {
+      margin-right: 30px;
+
+      :global {
+
+        .ant-menu-horizontal {
+          display: inline-block;
+          border-bottom: none;
+
+          > .ant-menu-item {
+            border-bottom: none;
+            border-top: 2px solid #fff;
+            padding: 8px 25px;
+
+            .anticon {
+              svg {
+                margin-right: 10px;
+              }
+            }
+          }
+
+          > .ant-menu-item:hover,
+          > .ant-menu-item-selected {
+            border-bottom: none;
+            border-top: 2px solid #1890ff;
+
+
+          }
+        }
+
+
+      }
+    }
+
+    .login {
+      width: 200px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      :global {
+        .ant-btn {
+          color: #1890ff;
+          border-color: #1890ff;
+        }
+
+
+      }
+
+      // margin-left: 30px;
+    }
+
+  }
+
+}

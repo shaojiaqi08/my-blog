@@ -1,0 +1,23 @@
+.file_comp {
+  padding: 50px;
+  box-sizing: border-box;
+  height: calc(100vh - 70px);
+
+  .tag_title{
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  :global {
+    .ant-timeline-item-head-custom {
+      top: 12px;
+      line-height: 0;
+    }
+  }
+
+  .clock_text {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
