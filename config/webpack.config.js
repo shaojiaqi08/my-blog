@@ -25,12 +25,17 @@ const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 
+// 打包分析插件
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 const postcssNormalize = require('postcss-normalize');
 
 const appPackageJson = require(paths.appPackageJson);
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
-const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
+// const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
+const shouldUseSourceMap = false;
+
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
 // makes for a smoother build process.
 const shouldInlineRuntimeChunk = process.env.INLINE_RUNTIME_CHUNK !== 'false';
@@ -220,6 +225,8 @@ module.exports = function(webpackEnv) {
               // Pending further investigation:
               // https://github.com/terser-js/terser/issues/120
               inline: 2,
+              // drop_debugger: true,
+              // drop_console: true,//不打印log
             },
             mangle: {
               safari10: true,
@@ -261,8 +268,45 @@ module.exports = function(webpackEnv) {
       // https://twitter.com/wSokra/status/969633336732905474
       // https://medium.com/webpack/webpack-4-code-splitting-chunk-graph-and-the-splitchunks-optimization-be739a861366
       splitChunks: {
-        chunks: 'all',
+        chunks: 'all',   // initial、async和all
+        // minSize: 30000,   // 形成一个新代码块最小的体积
+        // maxSize: 500000,
+        // maxAsyncRequests: 10,   // 按需加载时候最大的并行请求数
+        // maxInitialRequests: 10,   // 最大初始化请求数
+        // automaticNameDelimiter: '~',   // 打包分割符
         name: false,
+        // cacheGroups: {
+        //   reactBase: {
+        //     name: 'reactBase',
+        //     test: (module) => {
+        //       return /react|redux/.test(module.context);
+        //     },
+        //     chunks: 'initial',
+        //     priority: 10,
+        //   },
+        //   utilBase: {
+        //     name: 'utilBase',
+        //     test: (module) => {
+        //       return /rxjs|lodash/.test(module.context);
+        //     },
+        //     chunks: 'initial',
+        //     priority: 9,
+        //   },
+        //   uiBase: {
+        //     name: 'chartBase',
+        //     test: (module) => {
+        //       return /echarts/.test(module.context);
+        //     },
+        //     chunks: 'initial',
+        //     priority: 8,
+        //   },
+        //   commons: {
+        //     name: 'common',
+        //     chunks: 'initial',
+        //     priority: 2,
+        //     minChunks: 2,
+        //   },
+        // }
       },
       // Keep the runtime chunk separated to enable long term caching
       // https://twitter.com/wSokra/status/969679223278505985
@@ -292,6 +336,7 @@ module.exports = function(webpackEnv) {
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
         'react-native': 'react-native-web',
+        // '@ant-design/icons/lib/dist$': path.resolve(__dirname, '../src/utils/antdIcon.js'), // antd icon 按需引入
         // Allows for better profiling with ReactDevTools
         ...(isEnvProductionProfile && {
           'react-dom$': 'react-dom/profiling',
@@ -336,7 +381,7 @@ module.exports = function(webpackEnv) {
                 formatter: require.resolve('react-dev-utils/eslintFormatter'),
                 eslintPath: require.resolve('eslint'),
                 resolvePluginsRelativeTo: __dirname,
-                
+
               },
               loader: require.resolve('eslint-loader'),
             },
@@ -369,7 +414,7 @@ module.exports = function(webpackEnv) {
                 customize: require.resolve(
                   'babel-preset-react-app/webpack-overrides'
                 ),
-                
+
                 plugins: [
                   [
                     require.resolve('babel-plugin-named-asset-import'),
@@ -411,7 +456,7 @@ module.exports = function(webpackEnv) {
                 cacheDirectory: true,
                 // See #6846 for context on why cacheCompression is disabled
                 cacheCompression: false,
-                
+
                 // Babel sourcemaps are needed for debugging into node_modules
                 // code.  Without the options below, debuggers like VSCode
                 // show incorrect code and set breakpoints on the wrong lines.
@@ -508,6 +553,9 @@ module.exports = function(webpackEnv) {
       ],
     },
     plugins: [
+
+
+      new BundleAnalyzerPlugin(),
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
         Object.assign(
@@ -604,6 +652,7 @@ module.exports = function(webpackEnv) {
       // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
       // You can remove this if you don't use Moment.js:
       new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+      // new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /zh-cn|zh-hk|en/),
       // Generate a service worker script that will precache, and keep up to date,
       // the HTML & assets that are part of the webpack build.
       isEnvProduction &&

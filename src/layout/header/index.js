@@ -121,7 +121,7 @@ class HeaderComp extends Component {
             <div className={styles.header}>
                 <div className={styles.logo}>
                     <TwitterOutlined className={styles.font_logo}/>
-                    <span className={styles.logo_title}>S J Q 的博客</span>
+                    <span className={styles.logo_title}>JacKie_Shao的博客</span>
 
                     <div className={styles.search}>
                         <Input

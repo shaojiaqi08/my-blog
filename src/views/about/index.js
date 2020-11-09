@@ -85,8 +85,7 @@ function AboutPage() {
                     {/*{JSON.stringify(ui)}*/}
                     <div className={css.about_title}>
                         <img src={imgUrl} alt=""/>
-                        <span>前端搬运工, 爱折腾</span>
-                        <span>实践才是检验真理的唯一标准</span>
+                        <span>前端搬运工, 爱折腾, 实践才是检验真理的唯一标准</span>
                     </div>
                 </Col>
             </Row>
@@ -120,7 +119,7 @@ function AboutPage() {
                                         <Rate disabled defaultValue={3}/>
                                     </li>
                                     <li>
-                                        react vue 框架：熟练掌握使用！
+                                        react vue 框架：掌握使用！
                                         <Rate disabled defaultValue={3}/>
                                     </li>
                                     <li>

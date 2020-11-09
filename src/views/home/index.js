@@ -3,10 +3,17 @@ import {Divider} from "antd";
 import {withRouter} from 'react-router-dom'
 import css from "./scss/index.module.scss";
 import marked from 'marked'
-import hljs from "highlight.js";
+
+// import hljs from "highlight.js";
+import hljs from 'highlight.js/lib/core';
+import javascript from 'highlight.js/lib/languages/javascript';
+
+
 import 'highlight.js/styles/monokai-sublime.css';
 import moment from 'moment'
 import {search} from "../../request/api";
+
+hljs.registerLanguage('javascript', javascript);
 
 // 代码块添加行号
 function beforNumber(code) {
@@ -23,6 +30,22 @@ function beforNumber(code) {
     return list.join('\n');
 }
 
+// 解析富文本
+marked.setOptions({
+    renderer: new marked.Renderer(),
+    gfm: true,
+    pedantic: false,
+    sanitize: false,
+    tables: true,
+    breaks: true,
+    smartLists: true,
+    smartypants: true,
+    highlight: function (code) {
+        console.log(111)
+        return beforNumber(hljs.highlightAuto(code).value);
+    }
+});
+
 function Index(props) {
     // console.log(props);
     // const keyword = useSelector(state => state.keywordsReducer)
@@ -33,24 +56,13 @@ function Index(props) {
         // console.log(item)
     }
 
-    // 解析富文本
-    marked.setOptions({
-        renderer: new marked.Renderer(),
-        gfm: true,
-        pedantic: false,
-        sanitize: false,
-        tables: true,
-        breaks: true,
-        smartLists: true,
-        smartypants: true,
-        highlight: function (code) {
-            return beforNumber(hljs.highlightAuto(code).value);
-        }
-    });
+
+
+
 
     useEffect(() => {
 
-        console.log(props.location.query.keyword)
+        // console.log(props.location.query.keyword)
         if (props.location.query.keyword) {
             search(props.location.query.keyword).then(res => setSearchResult(res.data))
         }

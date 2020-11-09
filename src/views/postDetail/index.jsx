@@ -3,14 +3,22 @@ import {getPostDetail} from '../../request/api'
 import {withRouter} from 'react-router-dom'
 import css from './scss/index.module.scss'
 import marked from 'marked'
-import hljs from "highlight.js";
+
+// import hljs from "highlight.js";
+import hljs from 'highlight.js/lib/core';
+import javascript from 'highlight.js/lib/languages/javascript';
+
 import 'highlight.js/styles/monokai-sublime.css';
+// import 'highlight.js/styles/github.css';
 import moment from 'moment'
 import { Tag } from 'antd';
 import {FieldTimeOutlined, TagsOutlined} from '@ant-design/icons'
 
+hljs.registerLanguage('javascript', javascript);
+
 // 代码块添加行号
 function beforeNumber(code) {
+    console.log(code)
     if (!code.trim()) {
         return code;
     }
@@ -34,7 +42,10 @@ function PostDetail(props) {
             setData(res.data.detail)
             setDesc(marked(res.data.detail.desc))
         })
+
+
     }, [id])
+
     // 解析富文本
     marked.setOptions({
         renderer: new marked.Renderer(),
@@ -46,9 +57,11 @@ function PostDetail(props) {
         smartLists: true,
         smartypants: true,
         highlight: function (code) {
+            console.log(code)
             return beforeNumber(hljs.highlightAuto(code).value);
         }
     });
+
     return (
         <div className={css.detail}>
             <div className={css.detail_title}>
@@ -64,7 +77,7 @@ function PostDetail(props) {
 
                 <div className={css.tags}>
                     <TagsOutlined />
-                    <span>标签: <Tag color="orange">orange</Tag></span>
+                    <span>标签: <Tag color="orange">{data.tag}</Tag></span>
                 </div>
 
             </div>

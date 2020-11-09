@@ -19,23 +19,60 @@ import {HashRouter as Router, Route, Switch, Redirect} from "react-router-dom";
 
 import Admin from '../admin/index'
 import IndexComp from "../../views/home";
-import TimeLineComp from "../../views/timeline";
-import CategoryComp from "../../views/category";
-import AboutComp from "../../views/about";
-import {connect, useDispatch, useSelector} from "react-redux";
+// import TimeLineComp from "../../views/timeline";
+// import CategoryComp from "../../views/category";
+// import AboutComp from "../../views/about";
+import {connect, useSelector} from "react-redux";
+import Loadable from 'react-loadable'
 
-import Post from '../../views/postDetail'
+// import Post from '../../views/postDetail'
 
 const {Header, Sider, Content} = Layout;
 
+
+
+const LoadingComp = () => {
+    return (
+        <div className={css.layout_loading}>
+            <div className={css.loading_container}>
+                <Spin tip="Loading..." size="large" spinning={true}/>
+            </div>
+        </div>
+    )
+}
+
 // import { SlackSquareOutlined } from "@ant-design/icons";
+
+const DelayFile = Loadable({
+    loader: () => import('../../views/timeline/index'),
+    loading: LoadingComp
+})
+
+const DelayCate = Loadable({
+    loader: () => import('../../views/category/index'),
+    loading: LoadingComp
+})
+
+const DelayAbout = Loadable({
+    loader: () => import('../../views/about/index'),
+    loading: LoadingComp
+})
+
+
+
+const DelayPost = Loadable({
+    loader: () => import('../../views/postDetail/index'),
+    loading: LoadingComp
+})
 
 function LayoutComp(props) {
     const [indexData, setIndexData] = useState({})
     const state = useSelector(state => state)
 
+
+
     useEffect(() => {
-        console.log(props)
+        // console.log(props)
         getIndex().then(res => {
                 setIndexData(res.data)
                 // dispatch({
@@ -54,12 +91,7 @@ function LayoutComp(props) {
                 </Switch>
             </Router>
             {
-                state.loadingReducer && (
-                    <div className={css.layout_loading}>
-                        <div className={css.loading_container}>
-                            <Spin tip="Loading..." size="large" spinning={true}/>
-                        </div>
-                    </div>)
+                state.loadingReducer && <LoadingComp />
             }
 
 
@@ -81,10 +113,10 @@ function MainLayout({indexData}) {
                     <App>
                         <Switch>
                             <Route path="/" render={() => <IndexComp post={indexData.post}/>} exact/>
-                            <Route path="/file" render={() => <TimeLineComp/>}/>
-                            <Route path='/cate' render={() => <CategoryComp/>}/>
-                            <Route path='/about' render={() => <AboutComp/>}/>
-                            <Route path='/post/:id' render={() => <Post/>}/>
+                            <Route path="/file" render={() => <DelayFile/>}/>
+                            <Route path='/cate' render={() => <DelayCate/>}/>
+                            <Route path='/about' render={() => <DelayAbout/>}/>
+                            <Route path='/post/:id' render={() => <DelayPost/>}/>
                             <Redirect to='/'/>
                         </Switch>
 

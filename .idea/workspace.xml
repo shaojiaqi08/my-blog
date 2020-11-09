@@ -2,55 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2814072-b284-44e3-88f0-460e4192ee09" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/config/env.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/getHttpsConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/jest/cssTransform.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/jest/fileTransform.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/modules.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/paths.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/pnpTs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/webpackDevServer.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/build.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/start.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/comment/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/comment/scss/index.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/screen/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/screen/scss/index.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/searchPost/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/searchPost/scss/index.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userList/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userList/scss/index.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layout/admin/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layout/admin/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layout/index/connect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/loadingReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/navLinkReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/userReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/CodeBlock.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/mapUserStateDispatch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/addPost/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/addPost/scss/index.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/cateManager/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/cateManager/scss/index.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/postDetail/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/postDetail/scss/index.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/postManager/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/postManager/scss/index.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/userManager/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/userManager/scss/index.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/antdIcon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/sass/app.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/redux.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/admin/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/admin/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/admin/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/admin/scss/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/header/scss/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/scss/index.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/index/scss/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/index/scss/index.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/request/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/about/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/about/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/addPost/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/addPost/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/addPost/scss/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/addPost/scss/index.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/postDetail/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/postDetail/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="D:/project/demo/release/README.md" beforeDir="false" afterPath="D:/project/demo/release/README.md" afterDir="false" />
+      <change beforePath="D:/project/demo/release/config/config.default.js" beforeDir="false" afterPath="D:/project/demo/release/config/config.default.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +149,20 @@
       <workItem from="1602297054285" duration="8723000" />
       <workItem from="1602463061069" duration="14815000" />
       <workItem from="1602549391317" duration="17716000" />
-      <workItem from="1602638860952" duration="5937000" />
+      <workItem from="1602638860952" duration="11529000" />
+      <workItem from="1603418658908" duration="55000" />
+      <workItem from="1604023928710" duration="933000" />
+      <workItem from="1604201921255" duration="10000" />
+      <workItem from="1604277044576" duration="1700000" />
+      <workItem from="1604282837761" duration="6067000" />
+      <workItem from="1604290450048" duration="7102000" />
+      <workItem from="1604311041843" duration="975000" />
+      <workItem from="1604332320427" duration="685000" />
+      <workItem from="1604364042945" duration="14370000" />
+      <workItem from="1604449975689" duration="65000" />
+      <workItem from="1604481439130" duration="2938000" />
+      <workItem from="1604645472797" duration="11667000" />
+      <workItem from="1604881995192" duration="3833000" />
     </task>
     <servers />
   </component>
@@ -197,14 +182,14 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1539" y="78" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601980711452" />
-    <state x="-1414" y="111" width="757" height="690" key="find.popup" timestamp="1602644777307">
+    <state x="-1414" y="111" width="757" height="690" key="find.popup" timestamp="1604392009099">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1414" y="111" width="757" height="690" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602644777307" />
+    <state x="-1414" y="111" width="757" height="690" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604392009099" />
     <state x="506" y="111" width="757" height="690" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601895670092" />
-    <state x="-1381" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1602002101280">
+    <state x="-1381" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1604284740209">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1381" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1602002101280" />
+    <state x="-1381" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604284740209" />
   </component>
 </project>

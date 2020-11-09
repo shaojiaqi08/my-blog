@@ -27,6 +27,25 @@
   }
 }
 
+.layout_loading{
+  background: rgba(0,0,0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  .loading_container{
+    background: #fff;
+    padding: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+  }
+}
+
 
 
 

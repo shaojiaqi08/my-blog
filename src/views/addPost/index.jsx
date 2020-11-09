@@ -1,48 +1,50 @@
 import React, {useState, useRef, useEffect} from 'react'
 import css from './scss/index.module.scss'
 // 引入编辑器组件
-import BraftEditor from 'braft-editor'
+// import BraftEditor from 'braft-editor'
 // 引入编辑器样式
-import 'braft-editor/dist/index.css'
-import {Form, Input, Button, Tag, message} from 'antd';
-import {PlusOutlined } from '@ant-design/icons'
-import debounce from 'loadsh/debounce'
+// import 'braft-editor/dist/index.css'
+// import 'braft-extensions/dist/code-highlighter.css'
+import {Form, Input, Button, Tag, message, Modal} from 'antd';
+import {PlusOutlined, ExclamationCircleOutlined  } from '@ant-design/icons'
+// import debounce from 'loadsh/debounce'
 import {addPost, getCate, getPostDetail, updatePost} from '../../request/api'
 import {withRouter} from 'react-router-dom'
-import marked from 'marked'
+// import marked from 'marked'
 
+import SimpleMDE from "react-simplemde-editor";
+import "easymde/dist/easymde.min.css";
 
 
 const {CheckableTag} = Tag;
+const { confirm } = Modal;
 
 function AddPost(props) {
     const [form] = Form.useForm();
-    const [editorState, setEditorState] = useState(BraftEditor.createEditorState(""))
+    const [editorState, setEditorState] = useState('')
     const [selectedTags, setSelectedTags] = useState([])
     const [inputVisible, setInputVisible] = useState(false)
     const [inputValue, setInputValue] = useState('')
     const [tags, setTags] = useState([])
     const inputRef = useRef();
-    const editorRef = useRef()
     const formRef = useRef()
     const fileRef = useRef()
 
     // 解析富文本
-    marked.setOptions({
-        renderer: new marked.Renderer(),
-        gfm: true,
-        pedantic: false,
-        sanitize: false,
-        tables: true,
-        breaks: true,
-        smartLists: true,
-        smartypants: true
-    });
+    // marked.setOptions({
+    //     renderer: new marked.Renderer(),
+    //     gfm: true,
+    //     pedantic: false,
+    //     sanitize: false,
+    //     tables: true,
+    //     breaks: true,
+    //     smartLists: true,
+    //     smartypants: true
+    // });
 
 
     useEffect(() => {
 
-        // fetch(md).then(res => res.text()).then(result => console.log(result))
 
         getCate().then(res => {
             setTags(res.data)
@@ -50,13 +52,11 @@ function AddPost(props) {
             console.log(err)
             message.error(err.msg)
         })
-
-        console.log(props)
         const {query = {}} = props.location
         if (query.id) {
             getPostDetail(query.id).then(res => {
                 form.setFieldsValue({
-                    content: BraftEditor.createEditorState(marked((res.data.detail.desc))),
+                    content: res.data.detail.desc,
                     title: res.data.detail.postname
                 })
                 setSelectedTags([res.data.detail.tag])
@@ -67,43 +67,46 @@ function AddPost(props) {
         let saveContent = localStorage.getItem('editor_content') || ''
 
         if (saveContent) {
-            let content = BraftEditor.createEditorState(saveContent)
-            setEditorState(content)
+            confirmModel(saveContent)
+            // form.setFieldsValue({
+            //     content: saveContent
+            // })
+            // let content = BraftEditor.createEditorState(saveContent)
+            // setEditorState(content)
             // console.log(editorState)
         }
     }, [])
+
+    const confirmModel = saveContent => {
+        confirm({
+            title: '已保存内容未进行发布!',
+            icon: <ExclamationCircleOutlined />,
+            content: '是否要对已保存的文章内容进行编辑?',
+            centered: true,
+            onOk() {
+                console.log('OK');
+                form.setFieldsValue({
+                    content: saveContent
+                })
+            },
+            onCancel() {
+                console.log('Cancel');
+            },
+        });
+    }
 
     useEffect(() => {
         if (inputRef.current) inputRef.current.focus()
     }, [inputVisible])
 
-    const handleEditorChange = debounce((editorState) => {
-        // this.setState({ editorState })
-        // console.log(editorState.toHTML())
-        setEditorState(editorState)
-    }, 1000)
-
-    const submitContent = () => {
-        // 在编辑器获得焦点时按下ctrl+s会执行此方法
-        // 编辑器内容提交到服务端之前，可直接调用editorState.toHTML()来获取HTML格式的内容
-        // const htmlContent = this.state.editorState.toHTML()
-        // const result = await saveEditorContent(htmlContent)
-        localStorage.setItem("editor_content", editorState.toRAW())
-        message.success('保存成功');
-    }
 
     const onFinish = values => {
-        console.log('Success:', values.content.toHTML());
+        console.log('Success:', values);
 
         if (!values.title) return message.warning('标题不能为空!')
-        else if (editorState.isEmpty()) return message.warning('文章内容不能为空!')
-
+        else if (!values.content) return message.warning('文章内容不能为空!')
         if (selectedTags.length > 0) {
-            values.content = editorState.toHTML()
             values.tag = selectedTags[0]
-
-        } else {
-            values.content = editorState.toHTML()
         }
         const {query = {}} = props.location
         if(query.id) {
@@ -111,7 +114,7 @@ function AddPost(props) {
             updatePost(values).then(res => {
                 message.success(res.msg)
                 form.setFieldsValue({
-                    content: BraftEditor.createEditorState(''),
+                    content: '',
                     title: ''
                 })
                 setSelectedTags([])
@@ -122,7 +125,7 @@ function AddPost(props) {
                 localStorage.setItem('editor_content', '')
                 // console.log(editorRef)
                 formRef.current.resetFields()
-                editorRef.current.clearEditorContent()
+                // editorRef.current.clearEditorContent()
                 setSelectedTags([])
             }, err => {
                 message.error(err.msg)
@@ -171,6 +174,13 @@ function AddPost(props) {
         setInputValue('')
     };
 
+    const contentChange = (value) => {
+        // setEditorState(value)
+        form.setFieldsValue({
+            content: value
+        })
+    }
+
     const chooseFile = () => {
         if(!fileRef.current)return false
 
@@ -183,7 +193,7 @@ function AddPost(props) {
         reader.onload = function (e) {
             console.log(e)
             form.setFieldsValue({
-                content: BraftEditor.createEditorState(marked(e.target.result))
+                content: e.target.result
             })
             // console.log(e.target.result); 　　 //读取结果保存在字符串中
             // let my_str = e.target.result;　　　　//直接保存全部数据为一个字符串
@@ -196,6 +206,19 @@ function AddPost(props) {
             // });
         }.bind(this);
         // fetch(fileRef.current.value).then(res => console.log(res))
+    }
+
+    const onKeyDown = (e) => {
+        if (e.ctrlKey && e.keyCode == 83 || e.metaKey && e.keyCode == 83) {
+            // console.log('----', e.keyCode, e.ctrlKey, e.metaKey, e.shiftKey)
+            e.preventDefault();
+            // console.log('-----开始保存了')
+            localStorage.setItem('editor_content', form.getFieldValue('content'))
+            message.success('保存成功!')
+        }
+    }
+    const editorFocus = () => {
+        document.addEventListener("keydown", onKeyDown)
     }
 
     return (
@@ -251,24 +274,36 @@ function AddPost(props) {
                 <Form.Item>
                     <div className={css.editor}>
                         <Form.Item name="content">
-                            <BraftEditor
+                            <SimpleMDE
+                                id="editor"
+                                onFocus={editorFocus}
                                 value={editorState}
-                                onChange={handleEditorChange}
-                                onSave={submitContent}
-                                defaultValue={BraftEditor.createEditorState(localStorage.getItem('editor_content'))}
-                                ref={editorRef}
+                                options={{
+                                    spellChecker: false,
+                                    toolbar: [
+                                        'bold',
+                                        'italic',
+                                        'heading',
+                                        '|',
+                                        'quote',
+                                        'code',
+                                        'table',
+                                        'horizontal-rule',
+                                        'unordered-list',
+                                        'ordered-list',
+                                        '|',
+                                        'link',
+                                        'image',
+                                        '|',
+                                        'side-by-side',
+                                        'fullscreen',
+                                        '|',
+                                        'guide'
+                                    ]
+                                }}
+                                onChange={contentChange}
                             />
                         </Form.Item>
-
-                        {/*{form.getFieldDecorator('content', {*/}
-                        {/*    initialValue: BraftEditor.createEditorState('')*/}
-                        {/*})(*/}
-                        {/*    <BraftEditor*/}
-                        {/*        value={editorState}*/}
-                        {/*        onChange={handleEditorChange}*/}
-                        {/*        onSave={submitContent}*/}
-                        {/*    />*/}
-                        {/*)}*/}
                     </div>
                 </Form.Item>
 

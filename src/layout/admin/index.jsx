@@ -1,16 +1,51 @@
 import React, {useState, useEffect} from 'react'
-import {Layout, Menu, Breadcrumb, Dropdown} from 'antd';
+import {Layout, Menu, Breadcrumb, Dropdown, Spin} from 'antd';
 import {DownOutlined, TeamOutlined, CopyOutlined, UnorderedListOutlined, FormOutlined, AppstoreOutlined} from '@ant-design/icons';
 import './scss/index.scss'
 import { connect, useSelector, useDispatch } from "react-redux";
-import UserManager from '../../views/userManager'
-import PostManager from "../../views/postManager";
-import AddPost from "../../views/addPost";
-import CateManager from '../../views/cateManager'
+// import UserManager from '../../views/userManager'
+// import PostManager from "../../views/postManager";
+// import AddPost from "../../views/addPost";
+// import CateManager from '../../views/cateManager'
 import {Route, Switch, withRouter, Redirect} from 'react-router-dom'
 import {mapDispatchToProps} from '../../utils/mapUserStateDispatch'
+import Loadable from 'react-loadable'
+import css from "../index/scss/index.module.scss";
+
 const {SubMenu} = Menu;
 const {Header, Content, Sider} = Layout;
+
+
+const LoadingComp = () => {
+    return (
+        <div className={css.layout_loading}>
+            <div className={css.loading_container}>
+                <Spin tip="Loading..." size="large" spinning={true}/>
+            </div>
+        </div>
+    )
+}
+
+const DelayUserManager = Loadable({
+    loader: () => import('../../views/userManager'),
+    loading: LoadingComp
+})
+
+const DelayPostManager = Loadable({
+    loader: () => import('../../views/postManager'),
+    loading: LoadingComp
+})
+
+const DelayAddPost = Loadable({
+    loader: () => import('../../views/addPost'),
+    loading: LoadingComp
+})
+
+const DelayCateManager = Loadable({
+    loader: () => import('../../views/cateManager'),
+    loading: LoadingComp
+})
+
 
 function AdminIndex(props) {
     const user = useSelector(user => user.userReducer)
@@ -148,10 +183,10 @@ function AdminIndex(props) {
                             }}
                         >
                             <Switch>
-                                <Route path='/admin' exact render={() => <UserManager />}/>
-                                <Route path='/admin/manager' render={() => <PostManager />}/>
-                                <Route path='/admin/add' render={() => <AddPost />}/>
-                                <Route path='/admin/cate' render={() => <CateManager />}/>
+                                <Route path='/admin' exact render={() => <DelayUserManager />}/>
+                                <Route path='/admin/manager' render={() => <DelayPostManager />}/>
+                                <Route path='/admin/add' render={() => <DelayAddPost />}/>
+                                <Route path='/admin/cate' render={() => <DelayCateManager />}/>
                             </Switch>
 
 

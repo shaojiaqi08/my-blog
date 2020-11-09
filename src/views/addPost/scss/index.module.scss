@@ -22,17 +22,21 @@
       left:0;
       top:0;
     }
+
+    .CodeMirror{
+      height: 450px;
+    }
   }
 
   .tag_input {
     width: 100px;
   }
 
-  .editor {
-    border: 1px solid #dddddd;
-    border-radius: 5px;
+  //.editor {
+    //border: 1px solid #dddddd;
+    //border-radius: 5px;
 
-  }
+  //}
 
   .saveTip {
     margin-top: 10px;
