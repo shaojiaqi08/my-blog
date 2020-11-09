@@ -84,7 +84,6 @@ function AddPost(props) {
             content: '是否要对已保存的文章内容进行编辑?',
             centered: true,
             onOk() {
-                console.log('OK');
                 form.setFieldsValue({
                     content: saveContent
                 })
