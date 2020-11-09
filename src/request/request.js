@@ -8,8 +8,8 @@ store.subscribe(() => {
 })
 
 
-// const baseUrl = "https://www.jk-blog.site";
-const baseUrl = "http://127.0.0.1:7001";
+const baseUrl = "https://www.jk-blog.site";
+// const baseUrl = "http://127.0.0.1:7001";
 
 function fetchHelper(urlPath, options) {
     return fetch(baseUrl + urlPath, options);

@@ -2,26 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2814072-b284-44e3-88f0-460e4192ee09" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/antdIcon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/redux.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/admin/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/admin/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/admin/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/admin/scss/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/scss/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/scss/index.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/index/scss/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/index/scss/index.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/about/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/about/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/addPost/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/addPost/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/addPost/scss/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/addPost/scss/index.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/postDetail/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/postDetail/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
       <change beforePath="D:/project/demo/release/README.md" beforeDir="false" afterPath="D:/project/demo/release/README.md" afterDir="false" />
+      <change beforePath="D:/project/demo/release/app/service/user.js" beforeDir="false" afterPath="D:/project/demo/release/app/service/user.js" afterDir="false" />
       <change beforePath="D:/project/demo/release/config/config.default.js" beforeDir="false" afterPath="D:/project/demo/release/config/config.default.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +149,7 @@
       <workItem from="1604449975689" duration="65000" />
       <workItem from="1604481439130" duration="2938000" />
       <workItem from="1604645472797" duration="11667000" />
-      <workItem from="1604881995192" duration="3833000" />
+      <workItem from="1604881995192" duration="13673000" />
     </task>
     <servers />
   </component>
@@ -182,10 +169,10 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1539" y="78" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601980711452" />
-    <state x="-1414" y="111" width="757" height="690" key="find.popup" timestamp="1604392009099">
+    <state x="-1414" y="111" width="757" height="690" key="find.popup" timestamp="1604903029737">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1414" y="111" width="757" height="690" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604392009099" />
+    <state x="-1414" y="111" width="757" height="690" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604903029737" />
     <state x="506" y="111" width="757" height="690" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601895670092" />
     <state x="-1381" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1604284740209">
       <screen x="-1920" y="0" width="1920" height="1040" />

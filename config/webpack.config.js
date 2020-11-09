@@ -225,8 +225,8 @@ module.exports = function(webpackEnv) {
               // Pending further investigation:
               // https://github.com/terser-js/terser/issues/120
               inline: 2,
-              // drop_debugger: true,
-              // drop_console: true,//不打印log
+              drop_debugger: true,
+              drop_console: true,//不打印log
             },
             mangle: {
               safari10: true,
